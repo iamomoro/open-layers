@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  interaction, layer, custom, control,Interactions, Overlays, Controls, Map, Layers, Overlay, Util
+} from "react-openlayers";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <Map view={{center:[36.823102996344026, -1.2884355721062337],zoom:12.5,maxZoom: 20,projection: 'EPSG:4326',}}>
+      <Layers>
+        <layer.Tile></layer.Tile>
+      </Layers>
+     </Map>
     </div>
   );
 }
